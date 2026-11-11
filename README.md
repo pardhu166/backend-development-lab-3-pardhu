@@ -1,8 +1,8 @@
 # Lab 3: REST API, query parameters, validation, debugging
 
-**Name:** Your Name
-**Registration Number:** 12345678
-**Section:** A
+**Name:** GUNDA PARDHIV GANESH CHANDRA
+**Registration Number:** 252U1R6089
+**Section:** AIML - 2B (207)
 
 ---
 

@@ -1,18 +1,17 @@
 // db.js
 const sqlite3 = require('sqlite3').verbose();
-const path = require('path');
 
-// Database file in the project root
-const dbPath = path.resolve(__dirname, 'books.db');
-const db = new sqlite3.Database(dbPath, (err) => {
+// Use in-memory database (works on Vercel serverless).
+// For local persistence use: new sqlite3.Database('./books.db')
+const db = new sqlite3.Database(':memory:', (err) => {
   if (err) {
     console.error('Failed to open database:', err.message);
   } else {
-    console.log('Connected to SQLite database at', dbPath);
+    console.log('Connected to in-memory SQLite database');
   }
 });
 
-// Initialize the books table if it doesn't exist
+// Initialize the books table
 const initSql = `
 CREATE TABLE IF NOT EXISTS books (
   id INTEGER PRIMARY KEY AUTOINCREMENT,

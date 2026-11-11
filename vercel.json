@@ -8,7 +8,15 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/books/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/books",
+      "dest": "index.js"
+    },
+    {
+      "src": "/",
       "dest": "index.js"
     }
   ]
